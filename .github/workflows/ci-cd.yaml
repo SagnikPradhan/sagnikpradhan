@@ -1,0 +1,29 @@
+name: CI-CD
+
+on:
+    push:
+        branches: deployed
+
+jobs:
+    deploy:
+        name: Deploy the website
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clone Repository
+              uses: actions/checkout@v2
+
+            - name: Setup Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 13.x
+
+            - name: Install Dependencies
+              run: yarn install --check
+
+            - name: Setup Github Config
+              run: git config --global user.email "markten6321@gmail.com" && git config --global user.name "SagnikPradhan"
+
+            - name: Deploy
+              run: yarn run deploy
+              env:
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
