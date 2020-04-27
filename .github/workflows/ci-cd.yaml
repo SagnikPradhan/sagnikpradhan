@@ -18,7 +18,7 @@ jobs:
                   node-version: 13.x
 
             - name: Install Dependencies
-              run: yarn install --check
+              run: yarn install --check-cache
 
             - name: Setup Github Config
               run: git config --global user.email "markten6321@gmail.com" && git config --global user.name "SagnikPradhan"
