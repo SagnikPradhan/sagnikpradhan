@@ -6,7 +6,7 @@
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
-        "deploy": "yarn build && yarn gh-pages -b master -d public -r https://%GH_TOKEN%@github.com/SagnikPradhan/sagnikpradhan.github.io.git"
+        "deploy": "yarn build && gh-pages -b master -d public -r https://%GH_TOKEN%@github.com/SagnikPradhan/sagnikpradhan.github.io.git"
     },
     "husky": {
         "hooks": {
@@ -21,7 +21,6 @@
         "@rollup/plugin-commonjs": "^11.1.0",
         "@rollup/plugin-node-resolve": "^7.1.3",
         "@yarnpkg/pnpify": "^2.0.0-rc.21",
-        "gh-pages": "^2.2.0",
         "husky": "^4.2.5",
         "prettier": "^2.0.5",
         "prettier-plugin-svelte": "^0.7.0",

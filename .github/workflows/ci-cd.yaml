@@ -20,6 +20,9 @@ jobs:
             - name: Install Dependencies
               run: yarn install --check-cache
 
+            - name: Install gh-pages Globally
+              run: yarn global add gh-pages
+
             - name: Setup Github Config
               run: git config --global user.email "markten6321@gmail.com" && git config --global user.name "SagnikPradhan"
 
