@@ -6,7 +6,7 @@
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
-        "deploy": "yarn build && gh-pages -b master -d public -r https://%GH_TOKEN%@github.com/SagnikPradhan/sagnikpradhan.github.io.git"
+        "deploy": "yarn build && yarn dlx gh-pages -b master -d public -r https://%GH_TOKEN%@github.com/SagnikPradhan/sagnikpradhan.github.io.git"
     },
     "husky": {
         "hooks": {
