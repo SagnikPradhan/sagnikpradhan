@@ -1,28 +1,33 @@
 <script>
-	export let name;
+    import { Router, Route } from 'svelte-routing'
+
+    import Navbar from './components/Navbar/index.svelte'
+
+    import Home from './routes/Home/index.svelte'
+    import About from './routes/About/index.svelte'
+    import Blog from './routes/Blog/index.svelte'
+
+    export let url = ''
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+    <Router {url}>
+        <Navbar routes="{{ Home: '/', Blog: '/blog', 'About Me': '/about' }}" />
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+        <div id="content">
+            <!-- Blog -->
+            <Route path="blog" component="{Blog}" />
+            <Route path="blog/post/:id" let:params>
+                <Blog blogPostId="{params.id}" />
+            </Route>
+            <!-- About Me -->
+            <Route path="about">
+                <About />
+            </Route>
+            <!-- Home -->
+            <Route path="/">
+                <Home />
+            </Route>
+        </div>
+    </Router>
+</main>

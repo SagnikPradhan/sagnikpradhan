@@ -2526,6 +2526,7 @@ fsevents@~2.1.2:
     sass: ^1.26.5
     svelte: ^3.21.0
     svelte-preprocess: ^3.7.4
+    svelte-routing: ^1.4.2
   languageName: unknown
   linkType: soft
 
@@ -2827,6 +2828,15 @@ fsevents@~2.1.2:
     typescript:
       optional: true
   checksum: 2/42b0650a10abf417cb5c5e532c472af548908a124e8a14e0b249766eaa8297e61bb18e06d2916c75c92cb6d0fb29a19400882983f2c5b19c7a03e77c6ac6bd83
+  languageName: node
+  linkType: hard
+
+"svelte-routing@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "svelte-routing@npm:1.4.2"
+  peerDependencies:
+    svelte: 3.x
+  checksum: 2/ef5d8cde1e8488c9f781cea91749db85b160b1d91b7ec2782122f4b104b757260843de8ae7c61776b3bf72e5db372f17017e21c5d89cdb8b92be12a1b1c240d6
   languageName: node
   linkType: hard
 
