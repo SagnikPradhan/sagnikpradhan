@@ -31,6 +31,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@polka/url@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "@polka/url@npm:0.5.0"
+  checksum: 3/38bed31ba12ffb835d62d56064ff85b1070a4f247c7edac892ac55887e20b08f69cc91f5a8fc3a9559151c66a883bf4bc1cd54099bf1d0ee250d4d6f79d527b4
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-commonjs@npm:^11.1.0":
   version: 11.1.0
   resolution: "@rollup/plugin-commonjs@npm:11.1.0"
@@ -374,6 +381,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"console-clear@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "console-clear@npm:1.1.1"
+  checksum: 3/e82c5420fb6ee156459f4c691454776cd854753bd35e1ef0e1db08f5d35c081034951cb9c778ac0d17bc44fca172facea38c70aa66937a03ba5058072ceb68c9
+  languageName: node
+  linkType: hard
+
 "console-control-strings@npm:^1.0.0, console-control-strings@npm:~1.1.0":
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
@@ -558,6 +572,13 @@ fsevents@~2.1.2:
     strip-ansi: ^3.0.1
     wide-align: ^1.1.0
   checksum: 3/b136dbeb8e40acaaddab6c71c9f34d3c9aa104efc538c8c0ddcd74b25efb8daeb8dca24a9b30626b477d66beccd3dee8dd31e25eb4c7c97ec58a3f1a82914be1
+  languageName: node
+  linkType: hard
+
+"get-port@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "get-port@npm:3.2.0"
+  checksum: 3/84ce817471a062262a44e8172b6e8799e7ef523240ad1c03ce1396fd63d87426d46ae9c072f9ce55c0190403bc78e72b3bb493cd5cb16b49f3be52ae0924cdc2
   languageName: node
   linkType: hard
 
@@ -801,6 +822,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"kleur@npm:^3.0.0":
+  version: 3.0.3
+  resolution: "kleur@npm:3.0.3"
+  checksum: 3/20ef0e37fb3f9aebbec8a75b61f547051aa61e3a6c51bd2678e77a11d69d73885a76966aea77f09c40677c7dfa274a5e16741ec89859213c9f798d4a96f77521
+  languageName: node
+  linkType: hard
+
 "livereload-js@npm:^3.1.0":
   version: 3.2.2
   resolution: "livereload-js@npm:3.2.2"
@@ -819,6 +847,13 @@ fsevents@~2.1.2:
   bin:
     livereload: ./bin/livereload.js
   checksum: 3/e2c850e5d6c0191cc0796c0558f6c71bded88c3982835529dc8559e406516c61d3038e757e4a70a5ccf65b107ca8eace9b1a2211e5e3c71bacf329f971e606b1
+  languageName: node
+  linkType: hard
+
+"local-access@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "local-access@npm:1.0.1"
+  checksum: 3/fca90ccfe6e9dff65cd4c601c124ed931216ff1872b28b8ea99b0a7d9b6ae38536588a899ce8be807ef0cbefec6d328c8582b5bd457abc297570e0f1e0da4692
   languageName: node
   linkType: hard
 
@@ -854,7 +889,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mime@npm:>=2.0.3":
+"mime@npm:>=2.0.3, mime@npm:^2.3.1":
   version: 2.4.5
   resolution: "mime@npm:2.4.5"
   bin:
@@ -913,6 +948,13 @@ fsevents@~2.1.2:
   bin:
     mkdirp: bin/cmd.js
   checksum: 3/9dd9792e891927b14ca02226dbe1daeb717b9517a001620d5e2658bbc72c5e4f06887b6cbcbb60595fa5a56e701073cf250f1ed69c1988a6b89faf9fd6a4d049
+  languageName: node
+  linkType: hard
+
+"mri@npm:^1.1.0":
+  version: 1.1.5
+  resolution: "mri@npm:1.1.5"
+  checksum: 3/0f7baacf2ea2fcbe2ab28dda01296487de054158ee0a321a68e5a0dd37fadbb841a781a5cb65cc4f9f96efef2396f061f1b59a174ad55b239cf852d91f45d148
   languageName: node
   linkType: hard
 
@@ -1253,6 +1295,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"sade@npm:^1.4.0":
+  version: 1.7.3
+  resolution: "sade@npm:1.7.3"
+  dependencies:
+    mri: ^1.1.0
+  checksum: 3/07d9c961c45cde524b9f5e3e8d64c1dbbc6ae31309ed47b4f32829053d1aaf00c060af1257b496aa479b66254c53ee2836dc409be55107224fdea75ec805fffe
+  languageName: node
+  linkType: hard
+
 "safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.2":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
@@ -1286,6 +1337,7 @@ fsevents@~2.1.2:
     rollup-plugin-svelte: ^5.2.2
     rollup-plugin-terser: ^5.3.0
     sass: ^1.26.5
+    sirv-cli: ^0.4.5
     svelte: ^3.22.3
     svelte-preprocess: ^3.7.4
   languageName: unknown
@@ -1329,6 +1381,33 @@ fsevents@~2.1.2:
   version: 3.0.3
   resolution: "signal-exit@npm:3.0.3"
   checksum: 3/f8f3fec95c8d1f9ad7e3cce07e1195f84e7a85cdcb4e825e8a2b76aa5406a039083d2bc9662b3cf40e6948262f41277047d20e6fbd58c77edced0b18fab647d8
+  languageName: node
+  linkType: hard
+
+"sirv-cli@npm:^0.4.5":
+  version: 0.4.5
+  resolution: "sirv-cli@npm:0.4.5"
+  dependencies:
+    console-clear: ^1.1.0
+    get-port: ^3.2.0
+    kleur: ^3.0.0
+    local-access: ^1.0.1
+    sade: ^1.4.0
+    sirv: ^0.4.2
+    tinydate: ^1.0.0
+  bin:
+    sirv: index.js
+  checksum: 3/b8df386e81751b1ca684dd84881ee4bcbb53f0dd31983d2c22f761a825aae3d15f1a02dbced560a6f8a3cb421557442a329c355d08c0469e5fa0cfbfb7bf7af3
+  languageName: node
+  linkType: hard
+
+"sirv@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "sirv@npm:0.4.2"
+  dependencies:
+    "@polka/url": ^0.5.0
+    mime: ^2.3.1
+  checksum: 3/34de29b7083a3bf30d0e53f6fb85bb0bdb751a9804ed5de14cad182eb77d7c1775c9d9fa8c0d8451cea1044f7d4a366567b68f38b00db0467c139db9b9c6f8f8
   languageName: node
   linkType: hard
 
@@ -1512,6 +1591,13 @@ fsevents@~2.1.2:
   bin:
     terser: bin/terser
   checksum: 3/514910eef6688f65d5df576148472a58f70a7a8044d0badb9be3962ea32729fd7a8b4319dabd8c1774557818dca6b2118623c84af14c3fc3adaaf54b1c03bf61
+  languageName: node
+  linkType: hard
+
+"tinydate@npm:^1.0.0":
+  version: 1.2.0
+  resolution: "tinydate@npm:1.2.0"
+  checksum: 3/59a9ece36147d3ee59d4669ccda2c062aeac51c68e5170e0f30e52fb0f60e0202d77bc93e01a7c40b9bad9c461786091d812bcc4dcb78bba896fadb7595f7705
   languageName: node
   linkType: hard
 

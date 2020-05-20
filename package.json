@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "yarn dlx sirv public --single"
+    "start": "sirv public --single"
   },
   "repository": "https://github.com/SagnikPradhan/sagnikpradhan.git",
   "author": "Sagnik Pradhan <markten6321@gmail.com>",
@@ -20,6 +20,7 @@
     "rollup-plugin-svelte": "^5.2.2",
     "rollup-plugin-terser": "^5.3.0",
     "sass": "^1.26.5",
+    "sirv-cli": "^0.4.5",
     "svelte": "^3.22.3",
     "svelte-preprocess": "^3.7.4"
   }
