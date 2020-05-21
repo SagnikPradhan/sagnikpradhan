@@ -25,7 +25,6 @@
       display: flex;
       flex-direction: column;
       padding: 0 5em;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     }
   }
 </style>
