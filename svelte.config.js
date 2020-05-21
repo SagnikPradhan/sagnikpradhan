@@ -7,5 +7,5 @@ module.exports = {
     css.write('public/build/bundle.css');
   },
   // preprocess
-  preprocess: preprocess({})
+  preprocess: preprocess()
 }
