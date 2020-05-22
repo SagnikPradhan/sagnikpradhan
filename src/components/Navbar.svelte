@@ -5,23 +5,26 @@
     position: relative;
 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
 
-    writing-mode: sideways-lr;
+    writing-mode: vertical-lr;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 
     cursor: default;
 
     span.watermark {
       z-index: 0;
-      font-size: 96px;
+      line-height: 1;
+      font-size: 5rem;
       font-weight: 800;
       text-transform: uppercase;
       color: rgba(0, 0, 0, 0.1);
       position: absolute;
       bottom: 0;
+      left: 0;
     }
 
     h2#brand {
@@ -29,7 +32,7 @@
       font-family: "Playfair Display", serif;
       font-size: 42px;
       font-weight: 700;
-      writing-mode: initial;
+      writing-mode: horizontal-tb;
     }
   }
 
@@ -43,7 +46,7 @@
     flex-grow: 100;
 
     display: flex;
-    justify-content: baseline;
+    justify-content: flex-end;
 
     li {
       margin: 1em 0;
