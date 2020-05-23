@@ -91,6 +91,12 @@
       writing-mode: horizontal-tb;
       z-index: 20;
     }
+
+    @media only screen and (min-width: 500px) {
+      &#nav-untoggle {
+        display: none;
+      }
+    }
   }
 
   .center {
