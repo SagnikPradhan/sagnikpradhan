@@ -18,6 +18,7 @@
 
   html,
   body {
+    height: 100%;
     margin: 0px;
     font-family: sans-serif;
     font-size: 18px;
@@ -25,7 +26,7 @@
 
   div#app {
     width: 100vw;
-    min-height: 100vh;
+    height: 100%;
     overflow-x: hidden;
 
     display: grid;
