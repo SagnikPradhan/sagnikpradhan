@@ -26,6 +26,7 @@
     "vercel": "^19.0.1"
   },
   "dependencies": {
+    "regexparam": "^1.3.0",
     "sirv-cli": "^0.4.5"
   }
 }

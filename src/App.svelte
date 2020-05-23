@@ -1,4 +1,21 @@
+<script>
+  import Navbar from "./components/Navbar.svelte";
+  import Router from "./components/Router.svelte";
+
+  import Home from "./routes/Home.svelte";
+  import Blog from "./routes/Blog.svelte";
+
+  const Routes = [
+    { path: "/", component: Home },
+    { path: "/blog", component: Blog },
+    { path: "/blog/:id", component: Blog },
+  ];
+</script>
+
 <style lang="scss" global>
+  // Main colors white and rgba(0, 0, 0, 0.7)
+  // Color palette https://colorhunt.co/palette/182030
+
   html,
   body {
     margin: 0px;
@@ -30,12 +47,9 @@
 </style>
 
 <div id="app">
-  <Navbar></Navbar>
+  <Navbar />
   <main>
     <h1>Work in progress!</h1>
+    <Router routes={Routes} />
   </main>
 </div>
-
-<script>
-  import Navbar from './components/Navbar.svelte'
-</script>
