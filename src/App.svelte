@@ -29,7 +29,7 @@
     overflow-x: hidden;
 
     display: grid;
-    grid-template-columns: 5em 20fr 5em;
+    grid-template-columns: auto 100fr;
     grid-template-rows: 1fr;
 
     nav {
