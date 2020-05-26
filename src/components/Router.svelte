@@ -1,43 +1,63 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, SvelteComponent } from "svelte";
   import regexparam from "regexparam";
 
   // Check if props are right
   export let routes;
-  if (!Array.isArray(routes)) throw new Error("Invalid Routes Array");
 
-  // Covert path strings to RegExp
-  const Routes = routes.map(({ path, component }) => ({
-    path: regexparam(path),
-    component,
-  }));
+  // Component and its prop that should be rendered
+  let CurrentRouteComponent;
+  let CurrentRouteComponentParamProps;
 
-  // Component to be rendered
-  let CurrentRouteComponent = undefined;
-  let ComponentParams = {};
-
+  // Run the code onMount
   onMount(() => {
-    const currentPath = window.location.pathname;
-    console.log(`Current Path: ${currentPath}`);
+    const mainFn = async () => {
+      // Current Path
+      const currentPath = window.location.pathname;
 
-    // Get current paths component
-    const { component, path } =
-      Routes.find(({ path }) => path.pattern.test(currentPath)) || {};
+      // Make sure routes is an array
+      if (!Array.isArray(routes)) throw new Error("Routes should be an Array");
 
-    if (component) {
-      // Converts the array of params into an object
-      const paramsArr = path.pattern.exec(currentPath);
-      // First element of paramsArr is the path itself
-      paramsArr.shift();
-      const keysArr = path.keys;
-      const params = Object.fromEntries(
-        keysArr.map((key, index) => [key, paramsArr[index]])
-      );
+      // Iterate over routes
+      for (const { path, component } of routes) {
+        // Make sure route is vaild
+        if (typeof path != "string") throw new Error("Path should be a String");
+        if (typeof component != "function")
+          throw new Error("Component should be a function");
 
-      ComponentParams = params;
-      CurrentRouteComponent = component;
-    }
+        // Check if this is current route
+        const componentPathRegex = regexparam(path);
+        const componentPathPattern = componentPathRegex.pattern;
+        const thisIsNotCurrentRoute = !componentPathPattern.test(currentPath);
+
+        // Skip if not current route
+        if (thisIsNotCurrentRoute) continue;
+
+        // Route Parameters
+        const routeParamKeys = componentPathRegex.keys;
+        const routeParamMatch = (
+          componentPathPattern.exec(currentPath) || []
+        ).slice(1);
+        const routeParameters = Object.fromEntries(
+          routeParamKeys.map((key, idx) => [key, routeParamMatch[idx]])
+        );
+
+        // Import the component
+        const currentRouteComponent = (await component()).default;
+
+        // Finally Load it
+        CurrentRouteComponent = currentRouteComponent;
+        CurrentRouteComponentParamProps = routeParameters;
+
+        // Skip rest of the routes
+        break;
+      }
+    };
+
+    mainFn().catch((err) => console.error("Router: ", err));
   });
 </script>
 
-<svelte:component this={CurrentRouteComponent} params={ComponentParams} />
+<svelte:component
+  this={CurrentRouteComponent}
+  params={CurrentRouteComponentParamProps} />

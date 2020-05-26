@@ -2,13 +2,10 @@
   import Navbar from "./components/Navbar.svelte";
   import Router from "./components/Router.svelte";
 
-  import Home from "./routes/Home.svelte";
-  import Blog from "./routes/Blog.svelte";
-
   const Routes = [
-    { path: "/", component: Home },
-    { path: "/blog", component: Blog },
-    { path: "/blog/:id", component: Blog },
+    { path: "/", component: () => import("./routes/Home.svelte") },
+    { path: "/blog", component: () => import("./routes/Blog.svelte") },
+    { path: "/blog/:id", component: () => import("./routes/Blog.svelte") },
   ];
 </script>
 
