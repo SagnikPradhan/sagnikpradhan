@@ -1,8 +1,6 @@
 <script>
-  import { onMount, SvelteComponent } from "svelte";
   import regexparam from "regexparam";
 
-  // Check if props are right
   export let routes;
 
   // Component and its prop that should be rendered
@@ -10,53 +8,58 @@
   let CurrentRouteComponentParamProps;
 
   // Run the code onMount
-  onMount(() => {
-    const mainFn = async () => {
-      // Current Path
-      const currentPath = window.location.pathname;
+  const changeRoute = async () => {
+    // Dont serve on non-root path
+    if (location.pathname !== "/")
+      return console.log("Router: Not serving on non-root paths");
+    // Add hash if not preset
+    if (location.hash === "") location.hash = "/";
 
-      // Make sure routes is an array
-      if (!Array.isArray(routes)) throw new Error("Routes should be an Array");
+    // Current Path
+    const currentPath = location.hash.slice(1);
+    console.log(`Router: Current Path - ${currentPath}`)
 
-      // Iterate over routes
-      for (const { path, component } of routes) {
-        // Make sure route is vaild
-        if (typeof path != "string") throw new Error("Path should be a String");
-        if (typeof component != "function")
-          throw new Error("Component should be a function");
+    // Make sure routes is an array
+    if (!Array.isArray(routes)) throw new Error("Router: Routes should be an Array");
 
-        // Check if this is current route
-        const componentPathRegex = regexparam(path);
-        const componentPathPattern = componentPathRegex.pattern;
-        const thisIsNotCurrentRoute = !componentPathPattern.test(currentPath);
+    // Iterate over routes
+    for (const { path, component } of routes) {
+      // Make sure route is vaild
+      if (typeof path != "string") throw new Error("Router: Path should be a String");
+      if (typeof component != "function")
+        throw new Error("Router: Component should be a function");
 
-        // Skip if not current route
-        if (thisIsNotCurrentRoute) continue;
+      // Check if this is current route
+      const componentPathRegex = regexparam(path);
+      const componentPathPattern = componentPathRegex.pattern;
+      const thisIsNotCurrentRoute = !componentPathPattern.test(currentPath);
 
-        // Route Parameters
-        const routeParamKeys = componentPathRegex.keys;
-        const routeParamMatch = (
-          componentPathPattern.exec(currentPath) || []
-        ).slice(1);
-        const routeParameters = Object.fromEntries(
-          routeParamKeys.map((key, idx) => [key, routeParamMatch[idx]])
-        );
+      // Skip if not current route
+      if (thisIsNotCurrentRoute) continue;
 
-        // Import the component
-        const currentRouteComponent = (await component()).default;
+      // Route Parameters
+      const routeParamKeys = componentPathRegex.keys;
+      const routeParamMatch = (
+        componentPathPattern.exec(currentPath) || []
+      ).slice(1);
+      const routeParameters = Object.fromEntries(
+        routeParamKeys.map((key, idx) => [key, routeParamMatch[idx]])
+      );
 
-        // Finally Load it
-        CurrentRouteComponent = currentRouteComponent;
-        CurrentRouteComponentParamProps = routeParameters;
+      // Import the component
+      const currentRouteComponent = (await component()).default;
 
-        // Skip rest of the routes
-        break;
-      }
-    };
+      // Finally Load it
+      CurrentRouteComponent = currentRouteComponent;
+      CurrentRouteComponentParamProps = routeParameters;
 
-    mainFn().catch((err) => console.error("Router: ", err));
-  });
+      // Skip rest of the routes
+      break;
+    }
+  };
 </script>
+
+<svelte:window on:hashchange={changeRoute} on:load={changeRoute} />
 
 <svelte:component
   this={CurrentRouteComponent}
