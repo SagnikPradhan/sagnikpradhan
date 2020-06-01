@@ -57,14 +57,15 @@
 
     li {
       margin: 1em 0;
-      padding: 1em 0;
       text-transform: uppercase;
+      display: flex;
 
       &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       }
 
       a {
+        padding: 1em 0;
         font-size: 22px;
         font-family: "Jost", sans-serif;
         font-weight: 600;
@@ -124,12 +125,12 @@
   </h2>
 
   <ul id="menu">
-    <li class="center">
-      <a href="/">Home</a>
+    <li>
+      <a class="center" href="/#/">Home</a>
     </li>
 
-    <li class="center">
-      <a href="/blog">Blog</a>
+    <li>
+      <a class="center" href="/#/blog">Blog</a>
     </li>
   </ul>
 
