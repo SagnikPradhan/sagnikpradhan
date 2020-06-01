@@ -122,6 +122,59 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/build-utils@npm:2.3.2-canary.2":
+  version: 2.3.2-canary.2
+  resolution: "@vercel/build-utils@npm:2.3.2-canary.2"
+  checksum: 3/67804d758f710c6d1aaafa8895b28c0212ba6fb3b59d8d6696a12fb9f4155f2e2d95209cdb5ff2228cd00bf6e7f8fd2a9b14eaff75aa765a3b297fe44fb1b1b1
+  languageName: node
+  linkType: hard
+
+"@vercel/go@npm:1.1.2-canary.0":
+  version: 1.1.2-canary.0
+  resolution: "@vercel/go@npm:1.1.2-canary.0"
+  checksum: 3/9e467a0687e1752651fd0237d5da64d1a22d2e889ec58be5850690ac85521ae0aa5371fa33a6fc181afae046a5b2c5cefbad11d9561b0c2274bba66fd2951f2e
+  languageName: node
+  linkType: hard
+
+"@vercel/next@npm:2.6.3-canary.4":
+  version: 2.6.3-canary.4
+  resolution: "@vercel/next@npm:2.6.3-canary.4"
+  checksum: 3/9dcc3e6e1c555b437f5d86a230241ee89202da21fdae0625bfca9913518ee7d30fc0d0b2875c92b51e30d6dead625d65a954e754273bdd6a88461720bb3f2dea
+  languageName: node
+  linkType: hard
+
+"@vercel/node@npm:1.6.2-canary.4":
+  version: 1.6.2-canary.4
+  resolution: "@vercel/node@npm:1.6.2-canary.4"
+  dependencies:
+    "@types/node": "*"
+    ts-node: 8.9.1
+    typescript: 3.8.3
+  checksum: 3/d73bc8e43b5f219c62806c14893c79d0ff58f58b38990adca069f835e25744eb648b13219e6f86fd2c3d9af53250acb33bd2efae6d7d0a6fdb5dac070749402c
+  languageName: node
+  linkType: hard
+
+"@vercel/python@npm:1.2.2-canary.1":
+  version: 1.2.2-canary.1
+  resolution: "@vercel/python@npm:1.2.2-canary.1"
+  checksum: 3/5c9fea0bf95670f00b5b1fd41c2d2c3d4538388c2597c7dc691898c4a7fda3bab31c4594660aa4fe84f9bb9c5f9490b5ef2ce0ef6372a27e8a9cd38527795d0a
+  languageName: node
+  linkType: hard
+
+"@vercel/ruby@npm:1.2.2-canary.0":
+  version: 1.2.2-canary.0
+  resolution: "@vercel/ruby@npm:1.2.2-canary.0"
+  checksum: 3/c96a4fb0e58cb948a299a212d63374fa5bfd26f4ee78f990a649d2c93467b2ccb032d09bc2cbea9da1dad0530de9338bda9c77e54eb15fd86ba595524024e980
+  languageName: node
+  linkType: hard
+
+"@vercel/static-build@npm:0.17.2-canary.0":
+  version: 0.17.2-canary.0
+  resolution: "@vercel/static-build@npm:0.17.2-canary.0"
+  checksum: 3/8184fba14adc0ec8c20e73b85cd8b5e961bd5bfa73503b7bdfbd341f0194ec7c6a28b6483edc367e06e32a98cd5e0fce5ee1eeeffcf68d6dc58211a0ef49c9da
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -181,6 +234,13 @@ __metadata:
     delegates: ^1.0.0
     readable-stream: ^2.0.6
   checksum: 3/2d6fdb0ddde9b8cb120b6851b42c75f6b6db78b540b579a00d144ad38cb9e1bdf1248e5454049fcf5b47ef61d1a6f2ea433a8e38984158afd441bc1e0db7a625
+  languageName: node
+  linkType: hard
+
+"arg@npm:^4.1.0":
+  version: 4.1.3
+  resolution: "arg@npm:4.1.3"
+  checksum: 3/81b3b40b1529c4fbf75b12f7c3e6fb2dcce9e78072063babc169de9b4f40777788f3d2b04380f659ef676a756e03ccfbfe78adf4477353bda906295fa69dab89
   languageName: node
   linkType: hard
 
@@ -429,6 +489,13 @@ __metadata:
   version: 6.0.0
   resolution: "detect-indent@npm:6.0.0"
   checksum: 3/ad0619414151942d278c06cd4b6b79feb96c16eebf4979ef1d03433941f1a85c9bba7daba73a73814d629923716169da5416bbc4290c232d53a2dc06f462da5f
+  languageName: node
+  linkType: hard
+
+"diff@npm:^4.0.1":
+  version: 4.0.2
+  resolution: "diff@npm:4.0.2"
+  checksum: 3/81b5cd7ddde6f0ba2a532d434cfdca365aedd6cc62bb133e851e66e071d40382a30924a07c1034bd3d5a2e332146f64514b73c06fe2ebc0490a67f0c98da79fb
   languageName: node
   linkType: hard
 
@@ -863,6 +930,13 @@ fsevents@~2.1.2:
   dependencies:
     sourcemap-codec: ^1.4.4
   checksum: 3/4b70c13eb21c6f1c54bf7fb029748dc44d6bfcd3c59e5deeda060eecc38df6144b91d10fb7a3cf6156fadab1a68f83d69a189df20ca5f6bd088bf0196ea8f039
+  languageName: node
+  linkType: hard
+
+"make-error@npm:^1.1.1":
+  version: 1.3.6
+  resolution: "make-error@npm:1.3.6"
+  checksum: 3/2c780bab8409b865e8ee86697c599a2bf2765ec64d21eb67ccda27050e039f983feacad05a0d43aba3c966ea03d305d2612e94fec45474bcbc61181f57c5bb88
   languageName: node
   linkType: hard
 
@@ -1360,7 +1434,7 @@ fsevents@~2.1.2:
     sirv-cli: ^0.4.5
     svelte: ^3.22.3
     svelte-preprocess: ^3.7.4
-    vercel: ^19.0.1
+    vercel: canary
   languageName: unknown
   linkType: soft
 
@@ -1432,7 +1506,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:~0.5.12":
+"source-map-support@npm:^0.5.17, source-map-support@npm:~0.5.12":
   version: 0.5.19
   resolution: "source-map-support@npm:0.5.19"
   dependencies:
@@ -1641,6 +1715,26 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"ts-node@npm:8.9.1":
+  version: 8.9.1
+  resolution: "ts-node@npm:8.9.1"
+  dependencies:
+    arg: ^4.1.0
+    diff: ^4.0.1
+    make-error: ^1.1.1
+    source-map-support: ^0.5.17
+    yn: 3.1.1
+  peerDependencies:
+    typescript: ">=2.7"
+  bin:
+    ts-node: dist/bin.js
+    ts-node-script: dist/bin-script.js
+    ts-node-transpile-only: dist/bin-transpile.js
+    ts-script: dist/bin-script-deprecated.js
+  checksum: 3/8b365cd64448b6a7904f910d5d23d25ffc5a89a7dad9cfae9cf6c6cda464b08ecf10601aadc6db04155deecd9b64546745c614c3d4180d1d19ad85fdfb5f14d3
+  languageName: node
+  linkType: hard
+
 "tunnel-agent@npm:^0.6.0":
   version: 0.6.0
   resolution: "tunnel-agent@npm:0.6.0"
@@ -1654,6 +1748,26 @@ fsevents@~2.1.2:
   version: 0.14.5
   resolution: "tweetnacl@npm:0.14.5"
   checksum: 3/e1c9d52e2e9f582fd0df9ea26ba5a9ab88b9a38b69625d8e55c5e8870a4832ac8c32f8854b41fce7b59f97258bb103535363f9eda7050aa70e75824b972c7dde
+  languageName: node
+  linkType: hard
+
+typescript@3.8.3:
+  version: 3.8.3
+  resolution: "typescript@npm:3.8.3"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 3/519b11576247fe3570d89a2aa757d8f666aafc0cb9465a6cdd4df09c1dc6bf7285f0c6008d2ac7a55ea26457e767aaab819f58439d80af2cce1d9805b2be1034
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@3.8.3#builtin<compat/typescript>":
+  version: 3.8.3
+  resolution: "typescript@patch:typescript@npm%3A3.8.3#builtin<compat/typescript>::version=3.8.3&hash=8cac75"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 3/a32f5bfbaf77de05a6f7da10baea27c76281d969a73405336e5f53afb465539e2246fa5b83b9d4032046e6484a8f9c331d042dddb00fb74a8499d5a559d58682
   languageName: node
   linkType: hard
 
@@ -1682,13 +1796,21 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"vercel@npm:^19.0.1":
-  version: 19.0.1
-  resolution: "vercel@npm:19.0.1"
+"vercel@npm:canary":
+  version: 19.0.2-canary.8
+  resolution: "vercel@npm:19.0.2-canary.8"
+  dependencies:
+    "@vercel/build-utils": 2.3.2-canary.2
+    "@vercel/go": 1.1.2-canary.0
+    "@vercel/next": 2.6.3-canary.4
+    "@vercel/node": 1.6.2-canary.4
+    "@vercel/python": 1.2.2-canary.1
+    "@vercel/ruby": 1.2.2-canary.0
+    "@vercel/static-build": 0.17.2-canary.0
   bin:
     vc: ./dist/index.js
     vercel: ./dist/index.js
-  checksum: 3/d748cfb309026441300e8fa499a55c020dafc0bd1a9690195dd6d6ccdd8624a3feacec8e7943bff4551c1bb1f3b6140d5e8177a42b43bb70db9a42ddbfb24dd2
+  checksum: 3/ad52767692a70c26c45d12de8ce8a05af8207e537677fd5969aaf265794a7b088b98025c9690744e4f51fc61f314e6f98071163152a419ef3063cceb3ffdae88
   languageName: node
   linkType: hard
 
@@ -1743,5 +1865,12 @@ fsevents@~2.1.2:
   version: 3.1.1
   resolution: "yallist@npm:3.1.1"
   checksum: 3/f352c93b92f601bb0399210bca37272e669c961e9bd886bac545380598765cbfdfb4f166e7b6c57ca4ec8a5af4ab3fa0fd78a47f9a7d655a3d580ff0fc9e7d79
+  languageName: node
+  linkType: hard
+
+"yn@npm:3.1.1":
+  version: 3.1.1
+  resolution: "yn@npm:3.1.1"
+  checksum: 3/bff63b80568d80c711670935427494dde47cdf97e8b04196b140ce0af519c81c5ee857eddad0caa8b422dd65aea0157bbfaacbb1546bebba623f0f383d5d9ae5
   languageName: node
   linkType: hard
