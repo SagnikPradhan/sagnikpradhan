@@ -7,6 +7,11 @@
   let CurrentRouteComponent;
   let CurrentRouteComponentParamProps;
 
+  // Handles Promise rejections
+  const handleRejection = (promise) => {
+    if (promise instanceof Promise) promise.catch(console.error);
+  };
+
   // Run the code onMount
   const changeRoute = async () => {
     // Dont serve on non-root path
@@ -17,15 +22,17 @@
 
     // Current Path
     const currentPath = location.hash.slice(1);
-    console.log(`Router: Current Path - ${currentPath}`)
+    console.log(`Router: Current Path - ${currentPath}`);
 
     // Make sure routes is an array
-    if (!Array.isArray(routes)) throw new Error("Router: Routes should be an Array");
+    if (!Array.isArray(routes))
+      throw new Error("Router: Routes should be an Array");
 
     // Iterate over routes
     for (const { path, component } of routes) {
       // Make sure route is vaild
-      if (typeof path != "string") throw new Error("Router: Path should be a String");
+      if (typeof path != "string")
+        throw new Error("Router: Path should be a String");
       if (typeof component != "function")
         throw new Error("Router: Component should be a function");
 
@@ -57,9 +64,14 @@
       break;
     }
   };
+
+  // Make sure no unhandled promises rejections happen
+  const changeRouteUnpromisified = () => handleRejection(changeRoute());
 </script>
 
-<svelte:window on:hashchange={changeRoute} on:load={changeRoute} />
+<svelte:window
+  on:hashchange={changeRouteUnpromisified}
+  on:load={changeRouteUnpromisified} />
 
 <svelte:component
   this={CurrentRouteComponent}
