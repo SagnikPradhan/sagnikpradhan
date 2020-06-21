@@ -86,6 +86,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:66397870900ce2638a94725d40d37f8fc1f59581088146ec85fb83074b2258f102def242de7d76e767d520da576fff93f32e8412cfb2e422b1291ca41f1f5a90#npm:3.9.9"
       ],
       [
+        "typescript",
+        "patch:typescript@npm%3A3.9.5#builtin<compat/typescript>::version=3.9.5&hash=64df9d"
+      ],
+      [
         "vercel",
         "npm:19.0.2-canary.8"
       ]
@@ -111,6 +115,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["svelte", "npm:3.23.2"],
             ["svelte-language-server", "npm:0.10.50"],
             ["svelte-preprocess", "virtual:66397870900ce2638a94725d40d37f8fc1f59581088146ec85fb83074b2258f102def242de7d76e767d520da576fff93f32e8412cfb2e422b1291ca41f1f5a90#npm:3.9.9"],
+            ["typescript", "patch:typescript@npm%3A3.9.5#builtin<compat/typescript>::version=3.9.5&hash=64df9d"],
             ["vercel", "npm:19.0.2-canary.8"]
           ],
           "linkType": "SOFT",
@@ -1997,6 +2002,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["svelte", "npm:3.23.2"],
             ["svelte-language-server", "npm:0.10.50"],
             ["svelte-preprocess", "virtual:66397870900ce2638a94725d40d37f8fc1f59581088146ec85fb83074b2258f102def242de7d76e767d520da576fff93f32e8412cfb2e422b1291ca41f1f5a90#npm:3.9.9"],
+            ["typescript", "patch:typescript@npm%3A3.9.5#builtin<compat/typescript>::version=3.9.5&hash=64df9d"],
             ["vercel", "npm:19.0.2-canary.8"]
           ],
           "linkType": "SOFT",
@@ -2295,7 +2301,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-indent", "npm:3.0.0"],
             ["stylus", null],
             ["svelte", "npm:3.23.2"],
-            ["typescript", null]
+            ["typescript", "patch:typescript@npm%3A3.9.5#builtin<compat/typescript>::version=3.9.5&hash=64df9d"]
           ],
           "packagePeers": [
             "coffeescript",

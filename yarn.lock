@@ -1623,6 +1623,7 @@ fsevents@~2.1.2:
     svelte: ^3.23.2
     svelte-language-server: ^0.10.50
     svelte-preprocess: ^3.9.9
+    typescript: ^3.9.5
     vercel: canary
   languageName: unknown
   linkType: soft
@@ -2050,7 +2051,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-typescript@*:
+"typescript@*, typescript@^3.9.5":
   version: 3.9.5
   resolution: "typescript@npm:3.9.5"
   bin:
@@ -2070,7 +2071,7 @@ typescript@3.8.3:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@*#builtin<compat/typescript>":
+"typescript@patch:typescript@*#builtin<compat/typescript>, typescript@patch:typescript@^3.9.5#builtin<compat/typescript>":
   version: 3.9.5
   resolution: "typescript@patch:typescript@npm%3A3.9.5#builtin<compat/typescript>::version=3.9.5&hash=64df9d"
   bin:

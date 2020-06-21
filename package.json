@@ -24,6 +24,7 @@
     "svelte": "^3.23.2",
     "svelte-language-server": "^0.10.50",
     "svelte-preprocess": "^3.9.9",
+    "typescript": "^3.9.5",
     "vercel": "canary"
   },
   "dependencies": {
