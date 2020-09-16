@@ -1,34 +1,18 @@
 {
   "name": "sagnikpradhan",
-  "version": "0.0.2",
-  "description": "Personal Website",
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public --single"
-  },
-  "repository": "https://github.com/SagnikPradhan/sagnikpradhan.git",
-  "author": "Sagnik Pradhan <markten6321@gmail.com>",
-  "license": "MIT",
-  "private": true,
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^13.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.1",
-    "postcss": "^7.0.32",
-    "rollup": "^2.17.1",
-    "rollup-plugin-livereload": "^1.3.0",
-    "rollup-plugin-serve": "^1.0.1",
-    "rollup-plugin-svelte": "^5.2.3",
-    "rollup-plugin-terser": "^6.1.0",
-    "sass": "^1.26.8",
-    "svelte": "^3.23.2",
-    "svelte-language-server": "^0.10.50",
-    "svelte-preprocess": "^3.9.9",
-    "typescript": "^3.9.5",
-    "vercel": "canary"
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "node-sass": "^4.14.1",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-serve": "^1.0.4",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2",
+    "yakshaving": "^0.5.0"
   },
   "dependencies": {
-    "regexparam": "^1.3.0",
-    "sirv-cli": "^0.4.5"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

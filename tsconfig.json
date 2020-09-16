@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "es6",
+    "lib": ["es2019", "dom"],
+
+    "jsx": "react",
+
+    "sourceMap": true,
+
+    "outDir": "./public/dist",
+    "rootDir": "./source",
+
+    "strict": true,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "moduleResolution": "node",
+
+    "esModuleInterop": true,
+
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "typeRoots": ["./source/typings"]
+  }
+}
