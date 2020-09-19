@@ -1,8 +1,4 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./index.scss"
-
-const App = () => <h1>Hey there!</h1>;
-
-ReactDOM.render(<App />, document.getElementById("container"));
+ReactDOM.render(<h1>Hello</h1>, document.getElementById("container"));
