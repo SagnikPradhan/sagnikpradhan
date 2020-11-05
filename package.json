@@ -1,18 +1,21 @@
 {
-  "name": "sagnikpradhan",
-  "devDependencies": {
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
-    "@types/react-router-dom": "^5.1.5",
-    "node-sass": "^4.14.1",
-    "rollup-plugin-serve": "^1.0.4",
-    "tslib": "^2.0.1",
-    "typescript": "^4.0.2",
-    "yakshaving": "^0.5.0"
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "next": "^10.0.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.55",
+    "styled-jsx": "^3.3.1",
+    "typescript": "^4.0.5"
   }
 }
